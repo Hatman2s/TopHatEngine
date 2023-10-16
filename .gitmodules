@@ -1,0 +1,3 @@
+[submodule "TopHatEngine/src/externlibs"]
+	path = TopHatEngine/src/externlibs
+	url = https://github.com/gabime/spdlog
