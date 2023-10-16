@@ -1,0 +1,11 @@
+# Dirs
+.vs/
+bin/
+bin-int/
+bin-in/
+Scp-GF/
+x64/
+
+# Files
+
+*.user
