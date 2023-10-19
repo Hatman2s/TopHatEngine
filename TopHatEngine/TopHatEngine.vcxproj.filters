@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="TopHat">
-      <UniqueIdentifier>{35A3E7D3-2145-12AA-0A00-26FEF64099FA}</UniqueIdentifier>
+    <Filter Include="Events">
+      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\TopHat.h" />
+    <ClInclude Include="src\TopHat\Application.h" />
+    <ClInclude Include="src\TopHat\Events\ApplicationEvents.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\Events.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\KeyEvents.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\MouseEvents.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Handler.h" />
+    <ClInclude Include="src\TopHat\Log.h" />
+    <ClInclude Include="src\TopHat\Main.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\TopHat\Application.cpp">
-      <Filter>TopHat</Filter>
-    </ClCompile>
-    <ClCompile Include="src\TopHat\Log.cpp">
-      <Filter>TopHat</Filter>
-    </ClCompile>
+    <ClCompile Include="src\TopHat\Application.cpp" />
+    <ClCompile Include="src\TopHat\Log.cpp" />
   </ItemGroup>
 </Project>

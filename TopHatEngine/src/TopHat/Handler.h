@@ -11,3 +11,5 @@
 #error TopHatEngine does not support current os!
 
 #endif // TH_PLATFORM_WINDOWS
+
+#define BIT(x)(1 << x)

@@ -18,18 +18,19 @@ objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 files
 {
-    "%{prj.name}/src/TopHat**.h",
+    "%{prj.name}/src/TopHat/**.h",
     "%{prj.name}/src/TopHat/**.cpp"
 
 }
 includedirs
 {
-    "%{prj.name}/src/externlibs/spdlog/include;"
+    "%{prj.name}/externlibs/spdlog/include;",
+    "%{prj.name}/src;"
 }
 
 filter "system:windows"
 cppdialect "C++17"
-staticruntime "On"
+staticruntime "off"
 systemversion "latest"
 
 defines
@@ -45,12 +46,15 @@ postbuildcommands
 
 filter "configurations:Debug"
     defines "TH_DEBUG"
+    runtime "Debug"
     symbols "On"
 
 filter "configurations:RT"
     defines "TH_RT"
+    runtime "Release"
     optimize "On"
 
 filter "configurations:Release"
     defines "TH_RELEASE"
+    runtime "Release"
     optimize "On"

@@ -1,5 +1,5 @@
 #include "Application.h"
- 
+
 namespace TopHat
 {
 	Application::Application(){}
