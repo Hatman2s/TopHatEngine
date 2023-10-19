@@ -15,11 +15,14 @@ kind "Sharedlib"
 language "C++"
 targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+pchheader "THPrecomp.h"
+pchsource "TopHatEngine/src/THPrecomp.cpp"
+
 
 files
 {
-    "%{prj.name}/src/TopHat/**.h",
-    "%{prj.name}/src/TopHat/**.cpp"
+    "%{prj.name}/src/**.h",
+    "%{prj.name}/src/**.cpp"
 
 }
 includedirs

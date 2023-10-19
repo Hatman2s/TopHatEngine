@@ -3,8 +3,7 @@
 #include "TopHat/Handler.h"
 
 //precompiled header coming soon
-#include <string>
-#include <functional>
+ 
 
 namespace TopHat
 {

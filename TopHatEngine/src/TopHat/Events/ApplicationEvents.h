@@ -3,7 +3,7 @@
 #include "Events.h"
 
 //precompiled headers coming soon
-#include <sstream>
+ 
 
 namespace TopHat
 {

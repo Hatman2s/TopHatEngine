@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>THPrecomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TH_PLATFORM_WINDOWS;TH_BUILD_DLL;TH_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>externlibs\spdlog\include;;src;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -97,7 +98,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RT|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>THPrecomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TH_PLATFORM_WINDOWS;TH_BUILD_DLL;TH_RT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>externlibs\spdlog\include;;src;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -122,7 +124,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>THPrecomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TH_PLATFORM_WINDOWS;TH_BUILD_DLL;TH_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>externlibs\spdlog\include;;src;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -146,6 +149,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\THPrecomp.h" />
+    <ClInclude Include="src\TopHat.h" />
     <ClInclude Include="src\TopHat\Application.h" />
     <ClInclude Include="src\TopHat\Events\ApplicationEvents.h" />
     <ClInclude Include="src\TopHat\Events\Events.h" />
@@ -156,6 +161,9 @@
     <ClInclude Include="src\TopHat\Main.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\THPrecomp.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\TopHat\Application.cpp" />
     <ClCompile Include="src\TopHat\Log.cpp" />
   </ItemGroup>

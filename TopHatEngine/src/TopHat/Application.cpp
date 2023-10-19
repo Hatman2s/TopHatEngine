@@ -1,3 +1,4 @@
+#include "THPrecomp.h"
 #include "Application.h"
 
 #include "Events/ApplicationEvents.h"

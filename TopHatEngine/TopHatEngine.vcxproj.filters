@@ -1,30 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Events">
-      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
+    <Filter Include="TopHat">
+      <UniqueIdentifier>{35A3E7D3-2145-12AA-0A00-26FEF64099FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TopHat\Events">
+      <UniqueIdentifier>{7901A929-E5C1-2460-AEFC-6DDD1A7C693C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\TopHat\Application.h" />
+    <ClInclude Include="src\THPrecomp.h" />
+    <ClInclude Include="src\TopHat.h" />
+    <ClInclude Include="src\TopHat\Application.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
     <ClInclude Include="src\TopHat\Events\ApplicationEvents.h">
-      <Filter>Events</Filter>
+      <Filter>TopHat\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\TopHat\Events\Events.h">
-      <Filter>Events</Filter>
+      <Filter>TopHat\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\TopHat\Events\KeyEvents.h">
-      <Filter>Events</Filter>
+      <Filter>TopHat\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\TopHat\Events\MouseEvents.h">
-      <Filter>Events</Filter>
+      <Filter>TopHat\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Handler.h" />
-    <ClInclude Include="src\TopHat\Log.h" />
-    <ClInclude Include="src\TopHat\Main.h" />
+    <ClInclude Include="src\TopHat\Handler.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Log.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Main.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\TopHat\Application.cpp" />
-    <ClCompile Include="src\TopHat\Log.cpp" />
+    <ClCompile Include="src\THPrecomp.cpp" />
+    <ClCompile Include="src\TopHat\Application.cpp">
+      <Filter>TopHat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Log.cpp">
+      <Filter>TopHat</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
