@@ -3,6 +3,7 @@
 #include <memory>
 #include "Handler.h"
 #include "spdlog/spdlog.h"
+#include <spdlog/fmt/ostr.h>
 namespace TopHat
 {
 	class TOP_HAT_API Log
