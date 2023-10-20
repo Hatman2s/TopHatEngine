@@ -18,6 +18,8 @@ objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 pchheader "THPrecomp.h"
 pchsource "TopHatEngine/src/THPrecomp.cpp"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "TopHatEngine/externlibs/glfw/include"
 
 files
 {
@@ -28,7 +30,13 @@ files
 includedirs
 {
     "%{prj.name}/externlibs/spdlog/include;",
-    "%{prj.name}/src;"
+    "%{prj.name}/src;",
+    "%{IncludeDir.GLFW}"
+}
+links
+{
+    "GLFW",
+    "opengl32.lib"
 }
 
 filter "system:windows"
@@ -44,9 +52,9 @@ defines
 
 postbuildcommands
 {
-    ("{COPY} %{cfg.buildtarget.relpath} ../bin/Debug/Scp-GF")
+    ("{COPY} %{cfg.buildtarget.relpath} ../../SCP-GF/x64/Debug")
 }
-
+include "TopHatEngine/externlibs/glfw"
 filter "configurations:Debug"
     defines "TH_DEBUG"
     runtime "Debug"

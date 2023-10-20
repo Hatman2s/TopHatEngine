@@ -1,5 +1,5 @@
 #pragma once
-
+#include "THPrecomp.h"
 #include "TopHat/Handler.h"
 
 //precompiled header coming soon
@@ -91,6 +91,8 @@ namespace TopHat
 	private:
 		Event& m_Event;
 	};
+	
+	
 
 	inline std::ostream& operator << (std::ostream& os, const Event& e)
 	{

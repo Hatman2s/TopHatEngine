@@ -4,7 +4,8 @@
 #include<functional>
 #include<algorithm>
 #include<memory>
-#include<utility>
+//#include<utility>
+ 
 
 #include<string>
 #include<sstream>
@@ -13,6 +14,7 @@
 #include<unordered_map>
 #include<unordered_set>
 
+#include "TopHat/Log.h"
 
 #ifndef TH_PLATFORM_WINDOWS
 	#include <Windows.h>
