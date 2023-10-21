@@ -6,12 +6,28 @@
 #include "GLFW/glfw3.h"
 namespace TopHat
 {
+#define EVENT_BIND(x) std::bind(&Application::x, this, std::placeholders::_1)
+
+
 	Application::Application()
 	{
 		TopHat::Log::init();
 		m_Window = std::unique_ptr<Window>(Window::Create());
+		TH_ENGINE_INFO("Engine Initialised");
+		m_Window->OnEventCallback(EVENT_BIND(OnEvent));
 	}
 	Application::~Application(){}
+
+
+	void Application::OnEvent(Event& e)
+	{
+		EventDispatcher dispatch(e);
+		dispatch.Dispatch<WindowCloseEvent>(EVENT_BIND(OnWindowClose));
+
+		TH_ENGINE_TRACE("{0}", e);
+	}
+
+	
 
 	void Application::Run()
 	{
@@ -26,9 +42,12 @@ namespace TopHat
 			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
 		}
-		while (true)
-		{
+		 
+	}
 
-		}
+	bool Application::OnWindowClose(WindowCloseEvent& wc)
+	{
+		m_Running = false;
+		return true;
 	}
 }

@@ -7,6 +7,7 @@
 
 namespace TopHat
 {
+	
 	class TOP_HAT_API WindowResizeEvent: public Event
 	{
 	public:
@@ -27,14 +28,20 @@ namespace TopHat
 		unsigned int m_Width, m_Height;
 	};
 
-	class TOP_HAT_API WindowCloseEvent: public Event
+	class TOP_HAT_API WindowCloseEvent : public Event
 	{
 	public:
 		WindowCloseEvent(){}
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << " Window Close Event!";
+			return ss.str();
+		}
 		EVENT_TYPE(WindowClose)
 		EVENT_CATAGORY(EventCatagoryApp)
 	};
-
+	
 	class TOP_HAT_API AppTickEvent : public Event
 	{
 	public:

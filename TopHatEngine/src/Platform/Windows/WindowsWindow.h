@@ -20,7 +20,6 @@ namespace TopHat
 		inline bool IsVsync() const override { return m_Data.isVsync; }
 
 		inline void OnEventCallback(const EventCallbackFn& eventCall) override { m_Data.eventCallback = eventCall; }
-
 	protected: 
 		virtual void Init(const WindowProperties& wp);
 		virtual void Shutdown();
