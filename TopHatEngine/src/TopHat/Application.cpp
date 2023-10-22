@@ -1,17 +1,19 @@
 #include "THPrecomp.h"
 #include "Application.h"
-
 #include "Events/ApplicationEvents.h"
 #include "Log.h"
 #include "glad/glad.h"
+
+ 
+
 namespace TopHat
 {
 #define EVENT_BIND(x) std::bind(&Application::x, this, std::placeholders::_1)
 
-
+	Application* Application::s_Instance = nullptr;
 	Application::Application()
 	{
-
+		s_Instance = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		TH_ENGINE_INFO("Engine Initialised");
 		m_Window->OnEventCallback(EVENT_BIND(OnEvent));
@@ -59,6 +61,7 @@ namespace TopHat
 		{
 			glClearColor(0, 0.91764705882, 1, 0);
 			glClear(GL_COLOR_BUFFER_BIT);
+			 
 			for (Layer* layer : ls.GetLayers())
 				layer->OnUpdate();
 			m_Window->OnUpdate();

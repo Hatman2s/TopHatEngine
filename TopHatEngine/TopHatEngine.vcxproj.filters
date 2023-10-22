@@ -38,6 +38,9 @@
     <ClInclude Include="src\TopHat\Handler.h">
       <Filter>TopHat</Filter>
     </ClInclude>
+    <ClInclude Include="src\TopHat\Input.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
     <ClInclude Include="src\TopHat\Layer.h">
       <Filter>TopHat</Filter>
     </ClInclude>
@@ -52,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="src\TopHat\Window.h">
       <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="src\TopHat\Log.cpp">
       <Filter>TopHat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

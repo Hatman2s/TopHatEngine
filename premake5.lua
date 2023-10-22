@@ -1,5 +1,6 @@
 workspace "TopHatEngine"
 architecture "x64"
+startproject "Game"
 configurations
 {
     "Debug",
@@ -8,7 +9,7 @@ configurations
 }
 
 outputdir = "%{cfg.builder}-%{cfg.system}-%{cfg.architecture}"
-startproject "Game"
+
 
 project "TopHatEngine"
 location "TopHatEngine"

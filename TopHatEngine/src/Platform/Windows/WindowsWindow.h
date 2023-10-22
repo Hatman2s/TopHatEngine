@@ -15,6 +15,8 @@ namespace TopHat
 
 		inline unsigned int GetWidth() const override { return m_Data.width; }
 		inline unsigned int GetHeight() const override { return m_Data.height; }
+		
+		inline virtual void* GetNativeWindow() const { return m_Window; }
 
 		inline void SetVsync(bool enabled) override;
 		inline bool IsVsync() const override { return m_Data.isVsync; }

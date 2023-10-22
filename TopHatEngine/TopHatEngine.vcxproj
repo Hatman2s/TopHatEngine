@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Platform\WindowsInput.h" />
     <ClInclude Include="src\THPrecomp.h" />
     <ClInclude Include="src\TopHat.h" />
     <ClInclude Include="src\TopHat\Application.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="src\TopHat\Events\KeyEvents.h" />
     <ClInclude Include="src\TopHat\Events\MouseEvents.h" />
     <ClInclude Include="src\TopHat\Handler.h" />
+    <ClInclude Include="src\TopHat\Input.h" />
     <ClInclude Include="src\TopHat\Layer.h" />
     <ClInclude Include="src\TopHat\LayerStack.h" />
     <ClInclude Include="src\TopHat\Log.h" />
@@ -169,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\WindowsInput.cpp" />
     <ClCompile Include="src\THPrecomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
