@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TopHat">
+      <UniqueIdentifier>{35A3E7D3-2145-12AA-0A00-26FEF64099FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TopHat\Events">
+      <UniqueIdentifier>{7901A929-E5C1-2460-AEFC-6DDD1A7C693C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\THPrecomp.h" />
+    <ClInclude Include="src\TopHat.h" />
+    <ClInclude Include="src\TopHat\Application.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\ApplicationEvents.h">
+      <Filter>TopHat\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\Events.h">
+      <Filter>TopHat\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\KeyEvents.h">
+      <Filter>TopHat\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Events\MouseEvents.h">
+      <Filter>TopHat\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Handler.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Layer.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\LayerStack.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Log.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Main.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Window.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\THPrecomp.cpp" />
+    <ClCompile Include="src\TopHat\Application.cpp">
+      <Filter>TopHat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Layer.cpp">
+      <Filter>TopHat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\LayerStack.cpp">
+      <Filter>TopHat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Log.cpp">
+      <Filter>TopHat</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

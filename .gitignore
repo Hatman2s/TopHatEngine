@@ -1,0 +1,8 @@
+ Dirs
+.vs/
+bin/
+bin-int/
+Game/
+
+# Files
+*.user
