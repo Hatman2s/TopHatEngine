@@ -23,19 +23,22 @@ pchsource "TopHatEngine/src/THPrecomp.cpp"
 IncludeDir = {}
 IncludeDir["GLFW"] = "TopHatEngine/externlibs/glfw/include"
 IncludeDir["glad"] = "TopHatEngine/externlibs/glad/include"
+IncludeDir["glm"] = "TopHatEngine/externlibs/glm/glm"
 
 files
 {
     "%{prj.name}/src/**.h",
-    "%{prj.name}/src/**.cpp"
-
+    "%{prj.name}/src/**.cpp",
+    "%{prj.name}/externlibs/glm/glm/**.hpp",
+    "%{prj.name}/externlibs/glm/glm/**.inl"
 }
 includedirs
 {
     "%{prj.name}/externlibs/spdlog/include;",
     "%{prj.name}/src;",
     "%{IncludeDir.GLFW}",
-    "%{IncludeDir.glad}"
+    "%{IncludeDir.glad}",
+    "%{IncludeDir.glm}"
 }
 links
 {
@@ -93,7 +96,8 @@ include "TopHatEngine/externlibs/glad"
         includedirs
         {
             "TopHatEngine/externlibs/spdlog/include",
-            "TopHatEngine/src"
+            "TopHatEngine/src",
+            "%{IncludeDir.glm}"
         }
         links
         {
