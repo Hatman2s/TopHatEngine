@@ -1,3 +1,0 @@
-#include "THPrecomp.h"
-
- 

@@ -1,9 +1,0 @@
-[submodule "TopHatEngine/src/externlibs"]
-	path = TopHatEngine/src/externlibs
-	url = https://github.com/gabime/spdlog
-[submodule "TopHatEngine/externlibs/spdlog"]
-	path = TopHatEngine/externlibs/spdlog
-	url = https://github.com/gabime/spdlog
-[submodule "TopHatEngine/externlibs/glfw"]
-	path = TopHatEngine/externlibs/glfw
-	url = https://github.com/TheCherno/glfw
