@@ -3,7 +3,7 @@
 
 #include "Events/ApplicationEvents.h"
 #include "Log.h"
-#include "GLFW/glfw3.h"
+#include "glad/glad.h"
 namespace TopHat
 {
 #define EVENT_BIND(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -20,7 +20,7 @@ namespace TopHat
 
 	void Application::PushLayer(Layer* layer)
 	{
-		TH_ENGINE_TRACE(layer->GetLayerName());
+		 
 		ls.PushLayer(layer);
 	}
 	void Application::PushOverlay(Layer* layer)

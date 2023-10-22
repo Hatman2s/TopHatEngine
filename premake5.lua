@@ -21,6 +21,7 @@ pchsource "TopHatEngine/src/THPrecomp.cpp"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "TopHatEngine/externlibs/glfw/include"
+IncludeDir["glad"] = "TopHatEngine/externlibs/glad/include"
 
 files
 {
@@ -32,11 +33,13 @@ includedirs
 {
     "%{prj.name}/externlibs/spdlog/include;",
     "%{prj.name}/src;",
-    "%{IncludeDir.GLFW}"
+    "%{IncludeDir.GLFW}",
+    "%{IncludeDir.glad}"
 }
 links
 {
     "GLFW",
+    "glad",
     "opengl32.lib"
 }
 
@@ -47,7 +50,8 @@ systemversion "latest"
 
 defines
 {
-    "TH_PLATFORM_WINDOWS"
+    "TH_PLATFORM_WINDOWS",
+    "GLFW_INCLUDE_NONE"
 }
 
 postbuildcommands
@@ -71,6 +75,7 @@ postbuildcommands
         optimize "On"
 
 include "TopHatEngine/externlibs/glfw"
+include "TopHatEngine/externlibs/glad"
     project "Game"
         location "Game"
         kind "ConsoleApp"

@@ -3,6 +3,7 @@
 #include "TopHat/Events/ApplicationEvents.h"
 #include "TopHat/Events/KeyEvents.h"
 #include "TopHat/Events/MouseEvents.h"
+#include <glad/glad.h>
 
 namespace TopHat
 {
@@ -40,6 +41,8 @@ namespace TopHat
 		}
 		m_Window = glfwCreateWindow(m_Data.width, m_Data.height, m_Data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		TH_FRAMEWORK_ASSERTS(status, "Failed to Load Glad!")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVsync(true);
 
