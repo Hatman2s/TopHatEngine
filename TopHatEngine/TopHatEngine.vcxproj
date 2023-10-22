@@ -168,6 +168,8 @@
     <ClInclude Include="src\TopHat\Log.h" />
     <ClInclude Include="src\TopHat\Main.h" />
     <ClInclude Include="src\TopHat\Window.h" />
+    <ClInclude Include="src\TopHat\TopHatKeys.h" />
+    <ClInclude Include="src\TopHat\TopHatMouseButtons.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />

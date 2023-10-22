@@ -59,6 +59,12 @@
     <ClInclude Include="src\Platform\WindowsInput.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\TopHat\TopHatKeys.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\TopHatMouseButtons.h">
+      <Filter>TopHat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
