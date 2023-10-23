@@ -568,6 +568,7 @@
     <ClInclude Include="externlibs\glm\glm\vec3.hpp" />
     <ClInclude Include="externlibs\glm\glm\vec4.hpp" />
     <ClInclude Include="externlibs\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Platform\WindowsInput.h" />
     <ClInclude Include="src\THPrecomp.h" />
@@ -583,11 +584,13 @@
     <ClInclude Include="src\TopHat\LayerStack.h" />
     <ClInclude Include="src\TopHat\Log.h" />
     <ClInclude Include="src\TopHat\Main.h" />
+    <ClInclude Include="src\TopHat\Renderer\RenderContext.h" />
     <ClInclude Include="src\TopHat\TopHatKeys.h" />
     <ClInclude Include="src\TopHat\TopHatMouseButtons.h" />
     <ClInclude Include="src\TopHat\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Platform\WindowsInput.cpp" />
     <ClCompile Include="src\THPrecomp.cpp">

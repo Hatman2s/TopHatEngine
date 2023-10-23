@@ -4,6 +4,7 @@
 #include "TopHat/Events/KeyEvents.h"
 #include "TopHat/Events/MouseEvents.h"
 #include <glad/glad.h>
+#include "Platform/RenderAPI/OpenGL/OpenGLContext.h"
 
 namespace TopHat
 {
@@ -39,10 +40,12 @@ namespace TopHat
 			glfwSetErrorCallback(GLFWErrorCallback);
 			GLFWInit = true;
 		}
+
 		m_Window = glfwCreateWindow(m_Data.width, m_Data.height, m_Data.title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		TH_FRAMEWORK_ASSERTS(status, "Failed to Load Glad!")
+
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Init();
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVsync(true);
 
@@ -141,7 +144,8 @@ namespace TopHat
 	void WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
+		
 	}
 
 	void WindowsWindow::SetVsync(bool enabled)

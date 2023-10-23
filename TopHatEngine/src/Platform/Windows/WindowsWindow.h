@@ -2,6 +2,7 @@
 
 #include "TopHat/Window.h"
 #include "GLFW/glfw3.h"
+#include "TopHat/Renderer/RenderContext.h"
 
 namespace TopHat
 {
@@ -28,7 +29,7 @@ namespace TopHat
 	private:
 
 		GLFWwindow* m_Window;
-
+		RenderContext* m_Context;
 		struct WinData
 		{
 			std::string title;

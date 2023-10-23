@@ -18,6 +18,7 @@ namespace TopHat
 	void LayerStack::PushLayer(Layer* layer)
 	{
 		m_LayerInsert = m_Layers.emplace(m_LayerInsert,layer);
+		layer->OnAttach();
 	}
 	void LayerStack::PopLayer(Layer* layer)
 	{
@@ -25,12 +26,14 @@ namespace TopHat
 		if(it != m_Layers.end())
 		{
 			m_Layers.erase(it);
+			layer->OnDetach();
 		}
 	}
 
 	void LayerStack::PushOverlay(Layer* layer)
 	{
 		m_Layers.emplace_back(layer);
+		layer->OnAttach();
 	}
 	void LayerStack::PopOverlay(Layer* layer)
 	{
@@ -38,6 +41,7 @@ namespace TopHat
 		if (it != m_Layers.end())
 		{
 			m_Layers.erase(it);
+			layer->OnDetach();
 		}
 	}
 
