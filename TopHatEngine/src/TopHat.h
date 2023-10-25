@@ -17,6 +17,11 @@
 #include "TopHat/Input.h"
 #include "TopHat/TopHatKeys.h"
 #include "TopHat/TopHatMouseButtons.h"
+
+#include "TopHat/Renderer/Renderer.h"
+#include "TopHat/Renderer/Buffer.h"
+#include "TopHat/Renderer/Shader.h"
+#include "TopHat/Renderer/VertexArray.h"
 //-----------------------------------
 #include "TopHat/Main.h"
 //-----------------------------------

@@ -568,7 +568,10 @@
     <ClInclude Include="externlibs\glm\glm\vec3.hpp" />
     <ClInclude Include="externlibs\glm\glm\vec4.hpp" />
     <ClInclude Include="externlibs\glm\glm\vector_relational.hpp" />
-    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Platform\WindowsInput.h" />
     <ClInclude Include="src\THPrecomp.h" />
@@ -584,13 +587,19 @@
     <ClInclude Include="src\TopHat\LayerStack.h" />
     <ClInclude Include="src\TopHat\Log.h" />
     <ClInclude Include="src\TopHat\Main.h" />
-    <ClInclude Include="src\TopHat\Renderer\RenderContext.h" />
+    <ClInclude Include="src\TopHat\Renderer\Buffer.h" />
+    <ClInclude Include="src\TopHat\Renderer\Renderer.h" />
+    <ClInclude Include="src\TopHat\Renderer\Shader.h" />
+    <ClInclude Include="src\TopHat\Renderer\VertexArray.h" />
     <ClInclude Include="src\TopHat\TopHatKeys.h" />
     <ClInclude Include="src\TopHat\TopHatMouseButtons.h" />
     <ClInclude Include="src\TopHat\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Platform\WindowsInput.cpp" />
     <ClCompile Include="src\THPrecomp.cpp">
@@ -600,6 +609,10 @@
     <ClCompile Include="src\TopHat\Layer.cpp" />
     <ClCompile Include="src\TopHat\LayerStack.cpp" />
     <ClCompile Include="src\TopHat\Log.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Shader.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\VertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="externlibs\glfw\GLFW.vcxproj">

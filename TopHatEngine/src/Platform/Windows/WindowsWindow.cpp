@@ -4,7 +4,7 @@
 #include "TopHat/Events/KeyEvents.h"
 #include "TopHat/Events/MouseEvents.h"
 #include <glad/glad.h>
-#include "Platform/RenderAPI/OpenGL/OpenGLContext.h"
+#include "Platform/RenderAPI/OpenGL/OpenGLRenderer.h"
 
 namespace TopHat
 {

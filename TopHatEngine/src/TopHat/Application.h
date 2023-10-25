@@ -6,6 +6,8 @@
 #include "Events/Events.h"
 #include "Events/ApplicationEvents.h"
 
+#include "Renderer/Renderer.h"
+#include "Renderer/Shader.h"
 
 namespace TopHat
 {
@@ -26,6 +28,11 @@ namespace TopHat
 		bool m_Running = true;
 		LayerStack ls;
 		static Application* s_Instance;
+
+		std::shared_ptr<VertexBuffer> vertexBuffer;
+		std::shared_ptr<Shader> shader;
+		std::shared_ptr<VertexArray> vertexArray;
+		std::shared_ptr<IndexBuffer> indexBuffer;
 	};
 
 	Application* CreateGame();

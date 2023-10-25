@@ -2,7 +2,7 @@
 
 #include "TopHat/Window.h"
 #include "GLFW/glfw3.h"
-#include "TopHat/Renderer/RenderContext.h"
+#include "TopHat/Renderer/Renderer.h"
 
 namespace TopHat
 {

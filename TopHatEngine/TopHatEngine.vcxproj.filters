@@ -1341,8 +1341,14 @@
     <ClInclude Include="src\TopHat\Window.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\TopHat\Renderer\RenderContext.h" />
+    <ClInclude Include="src\TopHat\Renderer\Buffer.h" />
+    <ClInclude Include="src\TopHat\Renderer\Renderer.h" />
+    <ClInclude Include="src\TopHat\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.h" />
+    <ClInclude Include="src\TopHat\Renderer\Shader.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -1366,6 +1372,13 @@
     <ClCompile Include="src\TopHat\Log.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp" />
   </ItemGroup>
 </Project>

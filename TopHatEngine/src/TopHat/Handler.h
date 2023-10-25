@@ -18,7 +18,7 @@
 
 #ifdef TH_ENABLE_ASSERTS
 	#define TH_ASSERTS(x,...) {if(!(x)){APPLICATION_ERROR("ASSERTION FAILED! EXIT CODE: {0}", __VA_ARGS__); __debugbreak();}}
-	#define TH_FRAMEWORK_ASSERTS(x,...){if((!x)){TH_ENGINE_ERROR("ASSERTION FAILED! EXIT CODE: {0}",__VA_ARGS__); __debugbreak();}}
+	#define TH_FRAMEWORK_ASSERTS(x,...){if(!(x)){TH_ENGINE_ERROR("ASSERTION FAILED! EXIT CODE: {0}",__VA_ARGS__); __debugbreak();}}
 #else
 	#define TH_ASSERTS(x,...);
 	#define TH_FRAMEWORK_ASSERTS(x,...)
