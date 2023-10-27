@@ -2,6 +2,7 @@
 #include "OpenGLShader.h"
 #include "glad/glad.h"
 #include "gtc/type_ptr.hpp"
+#include "TopHat/Renderer/Renderer.h"
 #include <fstream>
 
 namespace TopHat
@@ -31,11 +32,13 @@ namespace TopHat
 	OpenGLShader::~OpenGLShader()
 	{
 		glDeleteProgram(m_RenderID);
+		
 	}
 
 	void OpenGLShader::Bind() const
 	{
 		glUseProgram(m_RenderID);
+		
 	}
 
 	void OpenGLShader::Unbind() const

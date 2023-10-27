@@ -22,6 +22,8 @@
 #include "TopHat/Renderer/Buffer.h"
 #include "TopHat/Renderer/Shader.h"
 #include "TopHat/Renderer/VertexArray.h"
+
+#include "TopHat/Camera.h"
 //-----------------------------------
 #include "TopHat/Main.h"
 //-----------------------------------

@@ -577,6 +577,7 @@
     <ClInclude Include="src\THPrecomp.h" />
     <ClInclude Include="src\TopHat.h" />
     <ClInclude Include="src\TopHat\Application.h" />
+    <ClInclude Include="src\TopHat\Camera.h" />
     <ClInclude Include="src\TopHat\Events\ApplicationEvents.h" />
     <ClInclude Include="src\TopHat\Events\Events.h" />
     <ClInclude Include="src\TopHat\Events\KeyEvents.h" />
@@ -606,6 +607,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\TopHat\Application.cpp" />
+    <ClCompile Include="src\TopHat\Camera.cpp" />
     <ClCompile Include="src\TopHat\Layer.cpp" />
     <ClCompile Include="src\TopHat\LayerStack.cpp" />
     <ClCompile Include="src\TopHat\Log.cpp" />

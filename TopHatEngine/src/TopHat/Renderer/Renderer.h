@@ -1,8 +1,7 @@
 #pragma once
-
-#include "glm.hpp"
 #include "VertexArray.h"
-
+#include "TopHat/Camera.h"
+#include "Shader.h"
 namespace TopHat
 {
 	class RenderContext
@@ -34,11 +33,16 @@ namespace TopHat
 	{
 	public:
 		static void Init();
-		static void BeginScene();
+		static void BeginScene(Camera& cam);
+		static void EndScene();
 		inline static RenderAPI::API GetAPI() { return RenderAPI::GetAPI(); }
-		static void Submit(const std::shared_ptr<VertexArray>& vertexArray);
+		static void Submit(std::shared_ptr<Shader> shader, const std::shared_ptr<VertexArray>& vertexArray);
 	private:
-		//TODO: implement Scene Data here
+		 struct SceneData
+		 {
+			 glm::mat4 m_ProjectionViewMatrix;
+		 };
+		 static SceneData* m_SD;
 	};
 
 	class RenderCommand
