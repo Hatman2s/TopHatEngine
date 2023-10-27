@@ -57,22 +57,12 @@ namespace TopHat
 
 		uint32_t index = 0;
 		const auto& layout = vb->GetBufferLayout();
-		for(int i = 0; i < layout.GetBufferElements().size(); i++)
+		for(const auto& e : layout.GetBufferElements())
 		{
-			const auto& e = layout.GetBufferElements()[i];
 			glEnableVertexAttribArray(index);
 			glVertexAttribPointer(index, e.GetComponentCount(), ShaderTypeToGLType(e.type), e.normalized ? GL_TRUE : GL_FALSE, layout.GetStride(), (const void*)e.offset);
 			index++;
 		}
-
-		//for some ungodly reason this fucking for each loop doesn't fucking work!!!
-		//honsetly never using a C for each loop again. very unreliable :(
-		//for(const auto& e : layout)
-		//{
-		//	glEnableVertexAttribArray(index);
-		//	glVertexAttribPointer(index, e.GetComponentCount(), ShaderTypeToGLType(e.type), e.normalized ? GL_TRUE : GL_FALSE, layout.GetStride(), (const void*)e.offset);
-		//	index++;
-		//}
 		m_VertexBuffers.push_back(vb);
 	}
 	void OpenGLVertexArray::AddIndexBuf(const std::shared_ptr<IndexBuffer>& ib)
