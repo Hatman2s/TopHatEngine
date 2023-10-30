@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Handler.h"
 #include "Events/Events.h"
+#include "Core/DeltaTime.h"
 
 namespace TopHat
 {
@@ -14,7 +14,7 @@ namespace TopHat
 
 		virtual void OnAttach(){}
 		virtual void OnDetach(){}
-		virtual void OnUpdate(){}
+		virtual void OnUpdate(DeltaTime& deltaT){}
 		virtual void OnEvent(Event& e){}
 
 		const inline std::string& GetLayerName() { return m_DebugName; }

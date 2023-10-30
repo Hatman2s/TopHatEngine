@@ -4,7 +4,10 @@
 	 
 	
 	 
+#elif TH_PLATFORM_MULTI
+
 #else
+
 #error TopHatEngine does not support current os!
 
 #endif // TH_PLATFORM_WINDOWS

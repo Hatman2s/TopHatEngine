@@ -5,7 +5,10 @@
 
 namespace TopHat
 {
+#ifdef TH_PLATFORM_WINDOWS
 	Input* Input::s_Instance = new WindowsInput();
+#endif
+
 	bool WindowsInput::IsKDown(int keycode)
 	{
 		

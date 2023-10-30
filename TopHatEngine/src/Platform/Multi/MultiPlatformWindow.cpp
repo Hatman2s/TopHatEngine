@@ -1,44 +1,48 @@
 #include "THPrecomp.h"
-#include "WindowsWindow.h"
+#include "MultiPlatformWindow.h"
 #include "TopHat/Events/ApplicationEvents.h"
 #include "TopHat/Events/KeyEvents.h"
 #include "TopHat/Events/MouseEvents.h"
-#include <glad/glad.h>
 #include "Platform/RenderAPI/OpenGL/OpenGLRenderer.h"
+#include "TopHat/Core/DeltaTime.h"
 
 namespace TopHat
 {
 	static bool GLFWInit = false;
 
-	static void GLFWErrorCallback( int error, const char* descript)
+	static void GLFWErrorCallback(int error, const char* descript)
 	{
 		TH_ENGINE_ERROR("GLFW ERROR ({0}): {1}", error, descript);
 	}
 
-#ifdef TH_PLATFORM_WINDOWS
+#ifdef TH_PLATFORM_MULTI
 	Window* Window::Create(const WindowProperties& wp)
 	{
-		return new WindowsWindow(wp);
+		return new MultiPlatformWindow(wp);
+	}
+	float Time::GetTime()
+	{
+		return static_cast<float>(glfwGetTime());
 	}
 #endif
 
-	WindowsWindow::WindowsWindow(const WindowProperties& winprops)
+	MultiPlatformWindow::MultiPlatformWindow(const WindowProperties& winprops)
 	{
 		Init(winprops);
 	}
-	WindowsWindow::~WindowsWindow() 
+	MultiPlatformWindow::~MultiPlatformWindow()
 	{
 		Shutdown();
 	}
 
-	void WindowsWindow::Init(const WindowProperties& wp)
+	void MultiPlatformWindow::Init(const WindowProperties& wp)
 	{
 		m_Data.title = wp.Title;
 		m_Data.width = wp.Width;
 		m_Data.height = wp.Height;
 		SetVsync(wp.IsVsync);
 
-		if(!GLFWInit)
+		if (!GLFWInit)
 		{
 			bool status = glfwInit();
 			TH_FRAMEWORK_ASSERTS(status, "Could Not Initialise GLFW");
@@ -61,7 +65,7 @@ namespace TopHat
 
 				data.width = width;
 				data.height = height;
-				 
+
 				WindowResizeEvent e(width, height);
 				data.eventCallback(e);
 			});
@@ -79,24 +83,24 @@ namespace TopHat
 				WinData& data = *(WinData*)glfwGetWindowUserPointer(window);
 				switch (action)
 				{
-					case GLFW_PRESS:
-					{
-						KeyDownEvent e(key, 0);
-						data.eventCallback(e);
-						break;
-					}
-					case GLFW_REPEAT:
-					{
-						KeyDownEvent e(key, 1);
-						data.eventCallback(e);
-						break;
-					}
-					case GLFW_RELEASE:
-					{
-						KeyUpEvent e(key);
-						data.eventCallback(e);
-						break;
-					}
+				case GLFW_PRESS:
+				{
+					KeyDownEvent e(key, 0);
+					data.eventCallback(e);
+					break;
+				}
+				case GLFW_REPEAT:
+				{
+					KeyDownEvent e(key, 1);
+					data.eventCallback(e);
+					break;
+				}
+				case GLFW_RELEASE:
+				{
+					KeyUpEvent e(key);
+					data.eventCallback(e);
+					break;
+				}
 				default:
 					break;
 				}
@@ -126,7 +130,7 @@ namespace TopHat
 
 			});
 
-		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoff, double yoff) 
+		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoff, double yoff)
 			{
 				WinData& data = *(WinData*)glfwGetWindowUserPointer(window);
 				MouseScrolledEvent e((float)xoff, (float)yoff);
@@ -139,23 +143,23 @@ namespace TopHat
 				MouseMovedEvent e((float)xpos, (float)ypos);
 				data.eventCallback(e);
 			});
-	
+
 	}
-	void WindowsWindow::Shutdown()
+	void MultiPlatformWindow::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
 		glfwTerminate();
 	}
-	void WindowsWindow::OnUpdate()
+	void MultiPlatformWindow::OnUpdate()
 	{
 		glfwPollEvents();
 		m_Context->SwapBuffers();
-		
+
 	}
 
-	void WindowsWindow::SetVsync(bool enabled)
+	void MultiPlatformWindow::SetVsync(bool enabled)
 	{
-		if(enabled)
+		if (enabled)
 		{
 			glfwSwapInterval(1);
 		}
@@ -167,8 +171,8 @@ namespace TopHat
 
 	}
 
-	 
 
-	
+
+
 
 }

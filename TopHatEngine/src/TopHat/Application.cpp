@@ -3,7 +3,7 @@
 #include "Events/ApplicationEvents.h"
 #include "Log.h"
 #include "glm.hpp"
-#include "glad/glad.h"
+
 
 #include "Renderer/Renderer.h"
 
@@ -20,6 +20,8 @@ namespace TopHat
 		TH_ENGINE_INFO("Engine Initialised");
 		Renderer::Init();
 		m_Window->OnEventCallback(EVENT_BIND(OnEvent));
+		
+		
 		
 		
 
@@ -65,12 +67,14 @@ namespace TopHat
 		}
 		while(m_Running)
 		{
-		
+			m_DeltaT.CalculateDeltaTime();
+			float dt = m_DeltaT;
+			/*TH_ENGINE_INFO(dt);*/
 			for (Layer* layer : ls.GetLayers())
 			{
-				layer->OnUpdate();
+				layer->OnUpdate(m_DeltaT);
 			}
-				
+			 
 			m_Window->OnUpdate();
 		}
 		 

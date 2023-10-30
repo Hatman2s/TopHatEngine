@@ -54,7 +54,8 @@ systemversion "latest"
 
 defines
 {
-    "TH_PLATFORM_WINDOWS",
+    --"TH_PLATFORM_WINDOWS",
+    "TH_PLATFORM_MULTI",
     "GLFW_INCLUDE_NONE"
 }
 
@@ -112,7 +113,8 @@ include "TopHatEngine/externlibs/glad"
     
             defines
             {
-                "TH_PLATFORM_WINDOWS"
+                --"TH_PLATFORM_WINDOWS"
+                "TH_PLATFORM_MULTI"
             }
     
         filter "configurations:Debug"

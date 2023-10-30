@@ -6,17 +6,17 @@
 
 namespace TopHat
 {
-	class  WindowsWindow: public Window
+	class  MultiPlatformWindow : public Window
 	{
 	public:
-		WindowsWindow(const WindowProperties& winprops);
-		virtual ~WindowsWindow();
+		MultiPlatformWindow(const WindowProperties& winprops);
+		virtual ~MultiPlatformWindow();
 
 		void OnUpdate() override;
-		
+
 		inline unsigned int GetWidth() const override { return m_Data.width; }
 		inline unsigned int GetHeight() const override { return m_Data.height; }
-		
+
 		inline virtual void* GetNativeWindow() const { return m_Window; }
 
 		inline void SetVsync(bool enabled) override;
@@ -24,7 +24,7 @@ namespace TopHat
 		 
 
 		inline void OnEventCallback(const EventCallbackFn& eventCall) override { m_Data.eventCallback = eventCall; }
-	protected: 
+	protected:
 		virtual void Init(const WindowProperties& wp);
 		virtual void Shutdown();
 	private:

@@ -1,13 +1,12 @@
 #pragma once
-#include "Handler.h"
+ 
 
 #include "Window.h"
 #include "LayerStack.h"
 #include "Events/Events.h"
 #include "Events/ApplicationEvents.h"
-
-#include "Renderer/Renderer.h"
-#include "Renderer/Shader.h"
+#include "Core/DeltaTime.h"
+ 
 
 namespace TopHat
 {
@@ -28,7 +27,7 @@ namespace TopHat
 		bool m_Running = true;
 		LayerStack ls;
 		static Application* s_Instance;
-
+		DeltaTime m_DeltaT = DeltaTime();
 		/*std::shared_ptr<VertexBuffer> vertexBuffer;
 		std::shared_ptr<Shader> shader;
 		std::shared_ptr<VertexArray> vertexArray;

@@ -28,14 +28,29 @@
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Platform\Multi">
+      <UniqueIdentifier>{5BF609F2-47DA-CA47-B03A-C59A9C3DB5C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\RenderAPI">
+      <UniqueIdentifier>{8AC26D2F-76BC-9681-5F29-2D924BC2FCED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\RenderAPI\OpenGL">
+      <UniqueIdentifier>{7EECF813-EA04-E03D-B3B1-6FD71F8974D7}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Platform\Windows">
       <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\TopHat">
       <UniqueIdentifier>{6C7C4631-5834-887E-C13B-61DAAD12236F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\TopHat\Core">
+      <UniqueIdentifier>{44441A2C-B0CF-87F0-B9E0-0AE525EBE3F0}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\TopHat\Events">
       <UniqueIdentifier>{D076DEA0-3C8D-DC36-8504-6858F159ADBE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\TopHat\Renderer">
+      <UniqueIdentifier>{92795249-FEDA-2F57-8748-7609F3A86616}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1287,11 +1302,26 @@
     <ClInclude Include="externlibs\glm\glm\vector_relational.hpp">
       <Filter>externlibs\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+    <ClInclude Include="src\Platform\Multi\MultiPlatformWindow.h">
+      <Filter>src\Platform\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.h">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.h">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>src\Platform\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\WindowsInput.h">
-      <Filter>src\Platform</Filter>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\THPrecomp.h">
       <Filter>src</Filter>
@@ -1301,6 +1331,12 @@
     </ClInclude>
     <ClInclude Include="src\TopHat\Application.h">
       <Filter>src\TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Camera.h">
+      <Filter>src\TopHat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Core\DeltaTime.h">
+      <Filter>src\TopHat\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\TopHat\Events\ApplicationEvents.h">
       <Filter>src\TopHat\Events</Filter>
@@ -1332,6 +1368,18 @@
     <ClInclude Include="src\TopHat\Main.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
+    <ClInclude Include="src\TopHat\Renderer\Buffer.h">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Renderer\Renderer.h">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Renderer\Shader.h">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TopHat\Renderer\VertexArray.h">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\TopHat\TopHatKeys.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
@@ -1341,27 +1389,34 @@
     <ClInclude Include="src\TopHat\Window.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Renderer\Buffer.h" />
-    <ClInclude Include="src\TopHat\Renderer\Renderer.h" />
-    <ClInclude Include="src\TopHat\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.h" />
-    <ClInclude Include="src\TopHat\Renderer\Shader.h" />
-    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h" />
-    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\TopHat\Camera.h" />
+    <ClInclude Include="src\Platform\Multi\MultiPlatformInput.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.cpp">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\WindowsInput.cpp">
-      <Filter>src\Platform</Filter>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\THPrecomp.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\TopHat\Application.cpp">
+      <Filter>src\TopHat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Camera.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
     <ClCompile Include="src\TopHat\Layer.cpp">
@@ -1373,14 +1428,19 @@
     <ClCompile Include="src\TopHat\Log.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
-    <ClCompile Include="src\TopHat\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\TopHat\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\TopHat\Renderer\VertexArray.cpp" />
-    <ClCompile Include="src\TopHat\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.cpp" />
-    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp" />
-    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp" />
-    <ClCompile Include="src\TopHat\Camera.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Buffer.cpp">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Renderer\Renderer.cpp">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Renderer\Shader.cpp">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TopHat\Renderer\VertexArray.cpp">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Multi\MultiPlatformWindow.cpp" />
+    <ClCompile Include="src\Platform\Multi\MultiPlatformInput.cpp" />
   </ItemGroup>
 </Project>

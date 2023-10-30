@@ -76,7 +76,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>THPrecomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>TH_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;TH_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TH_PLATFORM_MULTI;GLFW_INCLUDE_NONE;TH_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>externlibs\spdlog\include;;src;;externlibs\glfw\include;externlibs\glad\include;externlibs\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -100,7 +100,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>THPrecomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>TH_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;TH_RT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TH_PLATFORM_MULTI;GLFW_INCLUDE_NONE;TH_RT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>externlibs\spdlog\include;;src;;externlibs\glfw\include;externlibs\glad\include;externlibs\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -128,7 +128,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>THPrecomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>TH_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;TH_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TH_PLATFORM_MULTI;GLFW_INCLUDE_NONE;TH_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>externlibs\spdlog\include;;src;;externlibs\glfw\include;externlibs\glad\include;externlibs\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -568,16 +568,19 @@
     <ClInclude Include="externlibs\glm\glm\vec3.hpp" />
     <ClInclude Include="externlibs\glm\glm\vec4.hpp" />
     <ClInclude Include="externlibs\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="src\Platform\Multi\MultiPlatformInput.h" />
+    <ClInclude Include="src\Platform\Multi\MultiPlatformWindow.h" />
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.h" />
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\Platform\WindowsInput.h" />
     <ClInclude Include="src\THPrecomp.h" />
     <ClInclude Include="src\TopHat.h" />
     <ClInclude Include="src\TopHat\Application.h" />
     <ClInclude Include="src\TopHat\Camera.h" />
+    <ClInclude Include="src\TopHat\Core\DeltaTime.h" />
     <ClInclude Include="src\TopHat\Events\ApplicationEvents.h" />
     <ClInclude Include="src\TopHat\Events\Events.h" />
     <ClInclude Include="src\TopHat\Events\KeyEvents.h" />
@@ -597,12 +600,14 @@
     <ClInclude Include="src\TopHat\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Multi\MultiPlatformInput.cpp" />
+    <ClCompile Include="src\Platform\Multi\MultiPlatformWindow.cpp" />
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Platform\WindowsInput.cpp" />
     <ClCompile Include="src\THPrecomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
