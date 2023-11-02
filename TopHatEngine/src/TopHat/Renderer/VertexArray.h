@@ -12,11 +12,11 @@ namespace TopHat
 		virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;
 
-		virtual void AddVertexBuf(const std::shared_ptr<VertexBuffer>& vb) = 0;
-		virtual void AddIndexBuf(const std::shared_ptr<IndexBuffer>& ib) = 0;
+		virtual void AddVertexBuf(const Ref<VertexBuffer>& vb) = 0;
+		virtual void AddIndexBuf(const Ref<IndexBuffer>& ib) = 0;
 
-		virtual const std::vector<std::shared_ptr<VertexBuffer>>& GetVertexBuffer() const = 0;
-		virtual const std::shared_ptr<IndexBuffer>& GetIndexBuffer() const = 0;
+		virtual const std::vector<Ref<VertexBuffer>>& GetVertexBuffers() const = 0;
+		virtual const Ref<IndexBuffer>& GetIndexBuffer() const = 0;
 
 		static VertexArray* Create();
 

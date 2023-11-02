@@ -20,7 +20,7 @@ namespace TopHat
 		virtual void SetClearColor(const glm::vec4& color) = 0;
 		virtual void Clear() = 0;
 
-		virtual void DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray) =0;
+		virtual void DrawIndexed(const Ref<VertexArray>& vertexArray) =0;
 
 		inline static API GetAPI() { return s_API; }
 	private:
@@ -36,7 +36,7 @@ namespace TopHat
 		static void BeginScene(Camera& cam);
 		static void EndScene();
 		inline static RenderAPI::API GetAPI() { return RenderAPI::GetAPI(); }
-		static void Submit(std::shared_ptr<Shader> shader, const std::shared_ptr<VertexArray>& vertexArray, glm::mat4 trans = glm::mat4(1.0f));
+		static void Submit(Ref<Shader> shader, const Ref<VertexArray>& vertexArray, glm::mat4 trans = glm::mat4(1.0f));
 	private:
 		 struct SceneData
 		 {
@@ -51,7 +51,7 @@ namespace TopHat
 		inline static void Init() { s_RenderAPi->Init(); }
 		inline static void SetClearColor(const glm::vec4& color) { s_RenderAPi->SetClearColor(color); }
 		inline static void Clear() { s_RenderAPi->Clear(); }
-		inline static void DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray) { s_RenderAPi->DrawIndexed(vertexArray); }
+		inline static void DrawIndexed(const Ref<VertexArray>& vertexArray) { s_RenderAPi->DrawIndexed(vertexArray); }
 	private:
 		static RenderAPI* s_RenderAPi;
 

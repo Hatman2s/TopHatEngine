@@ -28,10 +28,7 @@ namespace TopHat
 		LayerStack ls;
 		static Application* s_Instance;
 		DeltaTime m_DeltaT = DeltaTime();
-		/*std::shared_ptr<VertexBuffer> vertexBuffer;
-		std::shared_ptr<Shader> shader;
-		std::shared_ptr<VertexArray> vertexArray;
-		std::shared_ptr<IndexBuffer> indexBuffer;*/
+	 
 	};
 
 	Application* CreateGame();

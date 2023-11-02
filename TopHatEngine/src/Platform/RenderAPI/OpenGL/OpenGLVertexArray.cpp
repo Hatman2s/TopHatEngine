@@ -47,7 +47,7 @@ namespace TopHat
 		glBindVertexArray(0);
 	}
 
-	void OpenGLVertexArray::AddVertexBuf(const std::shared_ptr<VertexBuffer>& vb)
+	void OpenGLVertexArray::AddVertexBuf(const Ref<VertexBuffer>& vb)
 	{
 		TH_FRAMEWORK_ASSERTS(vb->GetBufferLayout().GetBufferElements().size(), "Vertex Buffer has no layout!");
 
@@ -65,7 +65,7 @@ namespace TopHat
 		}
 		m_VertexBuffers.push_back(vb);
 	}
-	void OpenGLVertexArray::AddIndexBuf(const std::shared_ptr<IndexBuffer>& ib)
+	void OpenGLVertexArray::AddIndexBuf(const Ref<IndexBuffer>& ib)
 	{
 		glBindVertexArray(m_RenderID);
 		ib->Bind();
