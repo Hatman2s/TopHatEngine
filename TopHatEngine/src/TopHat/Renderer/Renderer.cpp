@@ -18,11 +18,12 @@ namespace TopHat
 		m_SD->m_ProjectionViewMatrix = cam.GetProjectionViewMatrix();
 	}
  
-	void Renderer::Submit(std::shared_ptr<Shader> shader, const std::shared_ptr<VertexArray>& vertexArray)
+	void Renderer::Submit(std::shared_ptr<Shader> shader, const std::shared_ptr<VertexArray>& vertexArray, glm::mat4 trans)
 	{
 		 
 		shader->Bind();
 		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("a_ViewProj", m_SD->m_ProjectionViewMatrix);
+		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("a_Trans", trans);
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);
 	}

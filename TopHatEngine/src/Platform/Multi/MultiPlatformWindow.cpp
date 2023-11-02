@@ -170,9 +170,4 @@ namespace TopHat
 		m_Data.isVsync = enabled;
 
 	}
-
-
-
-
-
 }

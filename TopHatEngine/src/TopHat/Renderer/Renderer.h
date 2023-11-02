@@ -36,7 +36,7 @@ namespace TopHat
 		static void BeginScene(Camera& cam);
 		static void EndScene();
 		inline static RenderAPI::API GetAPI() { return RenderAPI::GetAPI(); }
-		static void Submit(std::shared_ptr<Shader> shader, const std::shared_ptr<VertexArray>& vertexArray);
+		static void Submit(std::shared_ptr<Shader> shader, const std::shared_ptr<VertexArray>& vertexArray, glm::mat4 trans = glm::mat4(1.0f));
 	private:
 		 struct SceneData
 		 {

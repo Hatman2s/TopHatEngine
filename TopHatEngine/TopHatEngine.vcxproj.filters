@@ -37,9 +37,6 @@
     <Filter Include="src\Platform\RenderAPI\OpenGL">
       <UniqueIdentifier>{7EECF813-EA04-E03D-B3B1-6FD71F8974D7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Platform\Windows">
-      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\TopHat">
       <UniqueIdentifier>{6C7C4631-5834-887E-C13B-61DAAD12236F}</UniqueIdentifier>
     </Filter>
@@ -1302,6 +1299,9 @@
     <ClInclude Include="externlibs\glm\glm\vector_relational.hpp">
       <Filter>externlibs\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Multi\MultiPlatformInput.h">
+      <Filter>src\Platform\Multi</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Multi\MultiPlatformWindow.h">
       <Filter>src\Platform\Multi</Filter>
     </ClInclude>
@@ -1316,12 +1316,6 @@
     </ClInclude>
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
-      <Filter>src\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
-      <Filter>src\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\THPrecomp.h">
       <Filter>src</Filter>
@@ -1389,9 +1383,14 @@
     <ClInclude Include="src\TopHat\Window.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Multi\MultiPlatformInput.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Multi\MultiPlatformInput.cpp">
+      <Filter>src\Platform\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Multi\MultiPlatformWindow.cpp">
+      <Filter>src\Platform\Multi</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
     </ClCompile>
@@ -1403,12 +1402,6 @@
     </ClCompile>
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
-      <Filter>src\Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
-      <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\THPrecomp.cpp">
       <Filter>src</Filter>
@@ -1440,7 +1433,5 @@
     <ClCompile Include="src\TopHat\Renderer\VertexArray.cpp">
       <Filter>src\TopHat\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Multi\MultiPlatformWindow.cpp" />
-    <ClCompile Include="src\Platform\Multi\MultiPlatformInput.cpp" />
   </ItemGroup>
 </Project>

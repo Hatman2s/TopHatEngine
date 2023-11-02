@@ -574,8 +574,6 @@
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.h" />
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\THPrecomp.h" />
     <ClInclude Include="src\TopHat.h" />
     <ClInclude Include="src\TopHat\Application.h" />
@@ -606,8 +604,6 @@
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\THPrecomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

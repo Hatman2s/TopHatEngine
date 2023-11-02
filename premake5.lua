@@ -98,7 +98,8 @@ include "TopHatEngine/externlibs/glad"
         {
             "TopHatEngine/externlibs/spdlog/include",
             "TopHatEngine/src",
-            "%{IncludeDir.glm}"
+            "%{IncludeDir.glm}",
+            "%{IncludeDir.GLFW}"
         }
         links
         {
