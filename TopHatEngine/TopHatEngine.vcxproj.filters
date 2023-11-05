@@ -4,6 +4,9 @@
     <Filter Include="externlibs">
       <UniqueIdentifier>{A52BACE6-91E3-ED33-FAEA-C68FE6C18824}</UniqueIdentifier>
     </Filter>
+    <Filter Include="externlibs\STBI">
+      <UniqueIdentifier>{06AC63C4-7237-D188-7B48-547DE7522D89}</UniqueIdentifier>
+    </Filter>
     <Filter Include="externlibs\glm">
       <UniqueIdentifier>{74008F72-60CE-8278-4962-F39E35CF5EDD}</UniqueIdentifier>
     </Filter>
@@ -51,6 +54,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="externlibs\STBI\stb_image.h">
+      <Filter>externlibs\STBI</Filter>
+    </ClInclude>
     <ClInclude Include="externlibs\glm\glm\common.hpp">
       <Filter>externlibs\glm\glm</Filter>
     </ClInclude>
@@ -1314,6 +1320,9 @@
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.h">
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
     </ClInclude>
@@ -1371,6 +1380,9 @@
     <ClInclude Include="src\TopHat\Renderer\Shader.h">
       <Filter>src\TopHat\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\TopHat\Renderer\Texture.h">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\TopHat\Renderer\VertexArray.h">
       <Filter>src\TopHat\Renderer</Filter>
     </ClInclude>
@@ -1398,6 +1410,9 @@
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\RenderAPI\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLTexture.cpp">
       <Filter>src\Platform\RenderAPI\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.cpp">
@@ -1430,8 +1445,12 @@
     <ClCompile Include="src\TopHat\Renderer\Shader.cpp">
       <Filter>src\TopHat\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\TopHat\Renderer\Texture.cpp">
+      <Filter>src\TopHat\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\TopHat\Renderer\VertexArray.cpp">
       <Filter>src\TopHat\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="externlibs\STBI\stb_image.cpp" />
   </ItemGroup>
 </Project>

@@ -24,13 +24,16 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "TopHatEngine/externlibs/glfw/include"
 IncludeDir["glad"] = "TopHatEngine/externlibs/glad/include"
 IncludeDir["glm"] = "TopHatEngine/externlibs/glm/glm"
+IncludeDir["STBI"] = "TopHatEngine/externlibs/STBI"
 
 files
 {
     "%{prj.name}/src/**.h",
     "%{prj.name}/src/**.cpp",
     "%{prj.name}/externlibs/glm/glm/**.hpp",
-    "%{prj.name}/externlibs/glm/glm/**.inl"
+    "%{prj.name}/externlibs/glm/glm/**.inl",
+    "%{prj.name}/externlibs/STBI/**.h",
+	"%{prj.name}/externlibs/STBI/**.cpp",
 }
 includedirs
 {
@@ -38,7 +41,8 @@ includedirs
     "%{prj.name}/src;",
     "%{IncludeDir.GLFW}",
     "%{IncludeDir.glad}",
-    "%{IncludeDir.glm}"
+    "%{IncludeDir.glm}",
+    "%{IncludeDir.STBI}"
 }
 links
 {
