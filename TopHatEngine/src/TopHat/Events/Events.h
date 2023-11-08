@@ -71,19 +71,19 @@ namespace TopHat
 	class   EventDispatcher
 	{
 		//T must always be of Type Event 
-		template <typename T>
-		using EventFn = std::function<bool(T&)>;
+	/*	template <typename T>
+		using EventFn = std::function<bool(T&)>;*/
 
 	public:
 		EventDispatcher(Event& e): m_Event(e){}
 
 		//T must always be of Type Event 
-		template<typename T>
-		bool Dispatch(EventFn<T> func)
+		template<typename T, typename F>
+		bool Dispatch(const F& func)
 		{
 			if(m_Event.GetType() == T::GetStaticType())
 			{
-				m_Event.handled = func(*(T*)&m_Event);
+				m_Event.handled = func(static_cast<T&>(m_Event));
 				return true;
 			}
 			return false;

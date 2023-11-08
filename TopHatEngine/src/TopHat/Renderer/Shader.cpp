@@ -14,4 +14,14 @@ namespace TopHat
 		
 	}
 
+	Shader* Shader::Create(const std::string& name, const std::string& filepath)
+	{
+		switch (RenderAPI::GetAPI())
+		{
+		case RenderAPI::API::None: TH_FRAMEWORK_ASSERTS(false, "Render API Not set or doesn't exist"); return nullptr;
+		case RenderAPI::API::OpenGL: return new OpenGLShader(name,filepath);
+		}
+	}
+
+
 }

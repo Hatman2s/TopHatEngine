@@ -13,12 +13,14 @@ namespace TopHat
 	{
 	public:
 
+		OpenGLShader(const std::string& name,const std::string& filepath);
 		OpenGLShader(const std::string& filepath);
 		virtual ~OpenGLShader();
 
 		void Bind() const override;
 		void Unbind() const override;
 
+		const inline std::string& GetName() { return m_Name; }
 		void UploadUniformInt(const std::string& name, int value);
 		void UploadUniformInt2(const std::string& name, glm::int2& values);
 		void UploadUniformInt3(const std::string& name, glm::int3& values);
@@ -36,7 +38,7 @@ namespace TopHat
 
 	private:
 		uint32_t m_RenderID;
-
+		std::string m_Name;
 		std::string ReadFile(const std::string& filepath);
 		std::unordered_map<GLenum, std::string> PreProcess(const std::string& source);
 		void Compile(const std::unordered_map<GLenum, std::string>& shader);

@@ -22,12 +22,26 @@ namespace TopHat
 		return 0;
 	}
 
-	OpenGLShader::OpenGLShader(const std::string& filepath)
+	OpenGLShader::OpenGLShader(const std::string& name, const std::string& filepath) : m_Name(name)
 	{
 		std::string source = ReadFile(filepath);
 		auto shaderSRC = PreProcess(source);
 		Compile(shaderSRC);
 	}
+
+	OpenGLShader::OpenGLShader(const std::string& filepath)
+	{
+		std::string source = ReadFile(filepath);
+		auto shaderSRC = PreProcess(source);
+		Compile(shaderSRC);
+
+		auto lastSlash = filepath.find_last_of("/\\");
+		lastSlash = lastSlash == std::string::npos ? 0 : lastSlash + 1;
+		auto lastDot = filepath.rfind('.');
+		auto count = lastDot == std::string::npos ? filepath.size() - lastSlash : lastDot - lastSlash;
+		m_Name = filepath.substr(lastSlash, count);
+	}
+
 
 	OpenGLShader::~OpenGLShader()
 	{
@@ -45,6 +59,7 @@ namespace TopHat
 	{
 		glUseProgram(0);
 	}
+
 
 	void OpenGLShader::UploadUniformInt(const std::string& name, int value)
 	{
