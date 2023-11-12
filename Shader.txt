@@ -1,0 +1,35 @@
+#type vertex
+#version 330 core
+layout(location = 0) in vec3 a_Position;
+layout(location = 1) in vec4 a_Color;
+layout(location = 2) in vec2 a_TexCords;
+
+uniform mat4 a_ViewProj;
+uniform mat4 a_Trans;
+
+out vec4 v_Color;
+out vec2 v_TexCords;
+
+void main()
+{
+	v_TexCords = a_TexCords;		
+	v_Color = a_Color;
+	gl_Position = a_ViewProj * a_Trans * vec4(a_Position, 1.0);	
+}
+
+#type fragment
+
+#version 330 core
+			
+layout(location = 0) out vec4 color;
+
+in vec4 v_Color;
+in vec2 v_TexCords;
+
+uniform sampler2D u_Tex;
+
+void main()
+{
+
+	color = texture(u_Tex, v_TexCords);
+}

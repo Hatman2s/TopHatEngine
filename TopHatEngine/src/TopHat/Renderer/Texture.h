@@ -1,5 +1,6 @@
 #pragma once
-
+#include "TopHat/Handler.h"
+#include <string>
 namespace TopHat
 {
 	class Texture

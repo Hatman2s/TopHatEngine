@@ -12,15 +12,12 @@ namespace TopHat
 	class OpenGLShader: public Shader
 	{
 	public:
-
-		OpenGLShader(const std::string& name,const std::string& filepath);
 		OpenGLShader(const std::string& filepath);
 		virtual ~OpenGLShader();
 
 		void Bind() const override;
 		void Unbind() const override;
-
-		const inline std::string& GetName() { return m_Name; }
+		 
 		void UploadUniformInt(const std::string& name, int value);
 		void UploadUniformInt2(const std::string& name, glm::int2& values);
 		void UploadUniformInt3(const std::string& name, glm::int3& values);
