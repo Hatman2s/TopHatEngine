@@ -41,6 +41,7 @@ namespace TopHat
 	{
 		EventDispatcher dispatch(e);
 		dispatch.Dispatch<WindowCloseEvent>(EVENT_BIND(OnWindowClose));
+		dispatch.Dispatch<WindowResizeEvent>(EVENT_BIND(OnWindowResize));
 
 		/*std::cout << e.ToString();*/
 		/*TH_ENGINE_TRACE("{0}", e);*/
@@ -69,10 +70,12 @@ namespace TopHat
 		{
 			m_DeltaT.CalculateDeltaTime();
 			float dt = m_DeltaT;
-			/*TH_ENGINE_INFO(dt);*/
-			for (Layer* layer : ls.GetLayers())
+			if(!m_Minimised)
 			{
-				layer->OnUpdate(m_DeltaT);
+				for (Layer* layer : ls.GetLayers())
+				{
+					layer->OnUpdate(m_DeltaT);
+				}
 			}
 			 
 			m_Window->OnUpdate();
@@ -84,5 +87,17 @@ namespace TopHat
 	{
 		m_Running = false;
 		return true;
+	}
+
+	bool Application::OnWindowResize(WindowResizeEvent& wre)
+	{
+		if(wre.GetWidth() == 0 || wre.GetHeight() == 0)
+		{
+			m_Minimised = true;
+		}
+
+		m_Minimised = false;
+		RenderCommand::WindowResize(0, 0, wre.GetWidth(), wre.GetHeight());
+		return false;
 	}
 }

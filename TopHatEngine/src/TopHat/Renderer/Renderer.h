@@ -19,7 +19,7 @@ namespace TopHat
 		virtual void Init() = 0;
 		virtual void SetClearColor(const glm::vec4& color) = 0;
 		virtual void Clear() = 0;
-
+		virtual void WindowResize(uint32_t x, uint32_t y, uint32_t width, uint32_t height) = 0;
 		virtual void DrawIndexed(const Ref<VertexArray>& vertexArray) =0;
 
 		inline static API GetAPI() { return s_API; }
@@ -51,6 +51,7 @@ namespace TopHat
 		inline static void Init() { s_RenderAPi->Init(); }
 		inline static void SetClearColor(const glm::vec4& color) { s_RenderAPi->SetClearColor(color); }
 		inline static void Clear() { s_RenderAPi->Clear(); }
+		inline static void WindowResize(uint32_t x, uint32_t y, uint32_t width, uint32_t height) { s_RenderAPi->WindowResize(x, y, width, height);}
 		inline static void DrawIndexed(const Ref<VertexArray>& vertexArray) { s_RenderAPi->DrawIndexed(vertexArray); }
 	private:
 		static RenderAPI* s_RenderAPi;

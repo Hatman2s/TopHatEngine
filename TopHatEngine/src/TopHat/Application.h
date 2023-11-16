@@ -23,8 +23,9 @@ namespace TopHat
 		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& wc);
+		bool OnWindowResize(WindowResizeEvent& wre);
 		std::unique_ptr<Window> m_Window;
-		bool m_Running = true;
+		bool m_Running = true, m_Minimised = false;
 		LayerStack ls;
 		static Application* s_Instance;
 		DeltaTime m_DeltaT = DeltaTime();
