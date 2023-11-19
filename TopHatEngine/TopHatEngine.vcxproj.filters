@@ -1332,10 +1332,10 @@
     <ClInclude Include="src\TopHat.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Application.h">
+    <ClInclude Include="src\TopHat\Core\Application.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Camera.h">
+    <ClInclude Include="src\TopHat\Renderer\Camera.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
     <ClInclude Include="src\TopHat\Core\DeltaTime.h">
@@ -1353,22 +1353,22 @@
     <ClInclude Include="src\TopHat\Events\MouseEvents.h">
       <Filter>src\TopHat\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Handler.h">
+    <ClInclude Include="src\TopHat\Core\Handler.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Input.h">
+    <ClInclude Include="src\TopHat\Core\Input.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Layer.h">
+    <ClInclude Include="src\TopHat\Core\Layer.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\LayerStack.h">
+    <ClInclude Include="src\TopHat\Core\LayerStack.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Log.h">
+    <ClInclude Include="src\TopHat\Core\Log.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Main.h">
+    <ClInclude Include="src\TopHat\Core\Main.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
     <ClInclude Include="src\TopHat\Renderer\Buffer.h">
@@ -1386,13 +1386,13 @@
     <ClInclude Include="src\TopHat\Renderer\VertexArray.h">
       <Filter>src\TopHat\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\TopHatKeys.h">
+    <ClInclude Include="src\TopHat\Core\TopHatKeys.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\TopHatMouseButtons.h">
+    <ClInclude Include="src\TopHat\Core\TopHatMouseButtons.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
-    <ClInclude Include="src\TopHat\Window.h">
+    <ClInclude Include="src\TopHat\Core\Window.h">
       <Filter>src\TopHat</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1424,19 +1424,19 @@
     <ClCompile Include="src\THPrecomp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\TopHat\Application.cpp">
+    <ClCompile Include="src\TopHat\Core\Application.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
-    <ClCompile Include="src\TopHat\Camera.cpp">
+    <ClCompile Include="src\TopHat\Renderer\Camera.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
-    <ClCompile Include="src\TopHat\Layer.cpp">
+    <ClCompile Include="src\TopHat\Core\Layer.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
-    <ClCompile Include="src\TopHat\LayerStack.cpp">
+    <ClCompile Include="src\TopHat\Core\LayerStack.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
-    <ClCompile Include="src\TopHat\Log.cpp">
+    <ClCompile Include="src\TopHat\Core\Log.cpp">
       <Filter>src\TopHat</Filter>
     </ClCompile>
     <ClCompile Include="src\TopHat\Renderer\Buffer.cpp">

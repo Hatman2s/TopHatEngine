@@ -20,9 +20,12 @@ namespace TopHat
  
 	void Renderer::Submit(Ref<Shader> shader, const Ref<VertexArray>& vertexArray, glm::mat4 trans)
 	{
-		 
+		if(shader == nullptr)
+		{
+			TH_FRAMEWORK_ASSERTS(false, "Shader does not exist. Is the Shader Name Correct?")
+		}
 		shader->Bind();
-		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("a_ViewProj", m_SD->m_ProjectionViewMatrix);
+		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("a_ViewProj",m_SD->m_ProjectionViewMatrix);
 		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("a_Trans", trans);
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);

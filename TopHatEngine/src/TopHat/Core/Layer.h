@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Events/Events.h"
-#include "Core/DeltaTime.h"
+#include "TopHat/Events/Events.h"
+#include "DeltaTime.h"
 
 namespace TopHat
 {

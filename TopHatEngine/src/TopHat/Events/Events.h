@@ -1,6 +1,6 @@
 #pragma once
 #include "THPrecomp.h"
-#include "TopHat/Handler.h"
+#include "TopHat/Core/Handler.h"
 
 //precompiled header coming soon
  

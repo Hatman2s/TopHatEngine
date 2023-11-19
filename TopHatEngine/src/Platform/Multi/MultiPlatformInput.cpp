@@ -1,7 +1,7 @@
 #include "THPrecomp.h"
 #include "MultiPlatformInput.h"
 #include "GLFW/glfw3.h"
-#include "TopHat/Application.h"
+#include "TopHat/Core/Application.h"
 
 namespace TopHat
 {

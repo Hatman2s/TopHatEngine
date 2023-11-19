@@ -1,6 +1,6 @@
 #pragma once
 
-#include "TopHat/Input.h"
+#include "TopHat/Core/Input.h"
 
 namespace TopHat
 {

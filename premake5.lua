@@ -15,7 +15,7 @@ project "TopHatEngine"
 location "TopHatEngine"
 kind "Staticlib"
 language "C++"
-targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+targetdir ("bin/" .. outputdir .. "/%{prj.name}/%{cfg.buildcfg}")
 objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 pchheader "THPrecomp.h"
 pchsource "TopHatEngine/src/THPrecomp.cpp"

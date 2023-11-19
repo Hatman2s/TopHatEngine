@@ -1,11 +1,11 @@
 #include "THPrecomp.h"
 #include "Application.h"
-#include "Events/ApplicationEvents.h"
+#include "TopHat/Events/ApplicationEvents.h"
 #include "Log.h"
 #include "glm.hpp"
 
 
-#include "Renderer/Renderer.h"
+#include "TopHat/Renderer/Renderer.h"
 
 namespace TopHat
 {

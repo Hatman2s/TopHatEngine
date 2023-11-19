@@ -1,6 +1,6 @@
 #pragma once
 
-#include "TopHat/Window.h"
+#include "TopHat/Core/Window.h"
 #include "GLFW/glfw3.h"
 #include "TopHat/Renderer/Renderer.h"
 

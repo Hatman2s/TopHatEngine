@@ -1,6 +1,6 @@
 #pragma once
 #include "VertexArray.h"
-#include "TopHat/Camera.h"
+#include "TopHat/Renderer/Camera.h"
 #include "Shader.h"
 namespace TopHat
 {

@@ -1,5 +1,5 @@
 #pragma once
-#include "TopHat/Handler.h"
+#include "TopHat/Core/Handler.h"
 #include <string>
 namespace TopHat
 {

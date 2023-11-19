@@ -54,19 +54,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\-windows-x86_64\TopHatEngine\</OutDir>
+    <OutDir>..\bin\-windows-x86_64\TopHatEngine\Debug\</OutDir>
     <IntDir>..\bin-int\-windows-x86_64\TopHatEngine\Debug\</IntDir>
     <TargetName>TopHatEngine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RT|x64'">
-    <OutDir>..\bin\-windows-x86_64\TopHatEngine\</OutDir>
+    <OutDir>..\bin\-windows-x86_64\TopHatEngine\RT\</OutDir>
     <IntDir>..\bin-int\-windows-x86_64\TopHatEngine\RT\</IntDir>
     <TargetName>TopHatEngine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\-windows-x86_64\TopHatEngine\</OutDir>
+    <OutDir>..\bin\-windows-x86_64\TopHatEngine\Release\</OutDir>
     <IntDir>..\bin-int\-windows-x86_64\TopHatEngine\Release\</IntDir>
     <TargetName>TopHatEngine</TargetName>
     <TargetExt>.lib</TargetExt>
@@ -92,7 +92,7 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib\ (xcopy /Q /E /Y /I ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib "..\Game\src\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib "..\Game\src\" &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\-windows-x86_64\TopHatEngine\Debug\TopHatEngine.lib\ (xcopy /Q /E /Y /I ..\bin\-windows-x86_64\TopHatEngine\Debug\TopHatEngine.lib "..\Game\src\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\-windows-x86_64\TopHatEngine\Debug\TopHatEngine.lib "..\Game\src\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RT|x64'">
@@ -120,7 +120,7 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib\ (xcopy /Q /E /Y /I ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib "..\Game\src\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib "..\Game\src\" &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\-windows-x86_64\TopHatEngine\RT\TopHatEngine.lib\ (xcopy /Q /E /Y /I ..\bin\-windows-x86_64\TopHatEngine\RT\TopHatEngine.lib "..\Game\src\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\-windows-x86_64\TopHatEngine\RT\TopHatEngine.lib "..\Game\src\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -148,7 +148,7 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib\ (xcopy /Q /E /Y /I ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib "..\Game\src\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\-windows-x86_64\TopHatEngine\TopHatEngine.lib "..\Game\src\" &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\-windows-x86_64\TopHatEngine\Release\TopHatEngine.lib\ (xcopy /Q /E /Y /I ..\bin\-windows-x86_64\TopHatEngine\Release\TopHatEngine.lib "..\Game\src\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\-windows-x86_64\TopHatEngine\Release\TopHatEngine.lib "..\Game\src\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -578,27 +578,27 @@
     <ClInclude Include="src\Platform\RenderAPI\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\THPrecomp.h" />
     <ClInclude Include="src\TopHat.h" />
-    <ClInclude Include="src\TopHat\Application.h" />
-    <ClInclude Include="src\TopHat\Camera.h" />
+    <ClInclude Include="src\TopHat\Core\Application.h" />
+    <ClInclude Include="src\TopHat\Renderer\Camera.h" />
     <ClInclude Include="src\TopHat\Core\DeltaTime.h" />
     <ClInclude Include="src\TopHat\Events\ApplicationEvents.h" />
     <ClInclude Include="src\TopHat\Events\Events.h" />
     <ClInclude Include="src\TopHat\Events\KeyEvents.h" />
     <ClInclude Include="src\TopHat\Events\MouseEvents.h" />
-    <ClInclude Include="src\TopHat\Handler.h" />
-    <ClInclude Include="src\TopHat\Input.h" />
-    <ClInclude Include="src\TopHat\Layer.h" />
-    <ClInclude Include="src\TopHat\LayerStack.h" />
-    <ClInclude Include="src\TopHat\Log.h" />
-    <ClInclude Include="src\TopHat\Main.h" />
+    <ClInclude Include="src\TopHat\Core\Handler.h" />
+    <ClInclude Include="src\TopHat\Core\Input.h" />
+    <ClInclude Include="src\TopHat\Core\Layer.h" />
+    <ClInclude Include="src\TopHat\Core\LayerStack.h" />
+    <ClInclude Include="src\TopHat\Core\Log.h" />
+    <ClInclude Include="src\TopHat\Core\Main.h" />
     <ClInclude Include="src\TopHat\Renderer\Buffer.h" />
     <ClInclude Include="src\TopHat\Renderer\Renderer.h" />
     <ClInclude Include="src\TopHat\Renderer\Shader.h" />
     <ClInclude Include="src\TopHat\Renderer\Texture.h" />
     <ClInclude Include="src\TopHat\Renderer\VertexArray.h" />
-    <ClInclude Include="src\TopHat\TopHatKeys.h" />
-    <ClInclude Include="src\TopHat\TopHatMouseButtons.h" />
-    <ClInclude Include="src\TopHat\Window.h" />
+    <ClInclude Include="src\TopHat\Core\TopHatKeys.h" />
+    <ClInclude Include="src\TopHat\Core\TopHatMouseButtons.h" />
+    <ClInclude Include="src\TopHat\Core\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="externlibs\STBI\stb_image.cpp" />
@@ -612,11 +612,11 @@
     <ClCompile Include="src\THPrecomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\TopHat\Application.cpp" />
-    <ClCompile Include="src\TopHat\Camera.cpp" />
-    <ClCompile Include="src\TopHat\Layer.cpp" />
-    <ClCompile Include="src\TopHat\LayerStack.cpp" />
-    <ClCompile Include="src\TopHat\Log.cpp" />
+    <ClCompile Include="src\TopHat\Core\Application.cpp" />
+    <ClCompile Include="src\TopHat\Renderer\Camera.cpp" />
+    <ClCompile Include="src\TopHat\Core\Layer.cpp" />
+    <ClCompile Include="src\TopHat\Core\LayerStack.cpp" />
+    <ClCompile Include="src\TopHat\Core\Log.cpp" />
     <ClCompile Include="src\TopHat\Renderer\Buffer.cpp" />
     <ClCompile Include="src\TopHat\Renderer\Renderer.cpp" />
     <ClCompile Include="src\TopHat\Renderer\Shader.cpp" />

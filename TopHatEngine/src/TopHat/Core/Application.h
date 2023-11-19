@@ -3,9 +3,9 @@
 
 #include "Window.h"
 #include "LayerStack.h"
-#include "Events/Events.h"
-#include "Events/ApplicationEvents.h"
-#include "Core/DeltaTime.h"
+#include "TopHat/Events/Events.h"
+#include "TopHat/Events/ApplicationEvents.h"
+#include "DeltaTime.h"
  
 
 namespace TopHat

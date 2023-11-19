@@ -2,7 +2,7 @@
 
 #include "THPrecomp.h"
 #include "Handler.h"
-#include "Events/Events.h"
+#include "TopHat/Events/Events.h"
 
 namespace TopHat
 {
